@@ -1,0 +1,37 @@
+{% macro display(piches) %}
+				{% if piches %}
+					{% for category in piches %}
+						<section>
+							<p>
+							<p><i class="fa-solid fa-circle dot"></i>{{category.title}}</p>
+							<p class="post">{{category.post}}</p>
+
+							<div class="info">
+								<p>Category: {{category.category}}</p>
+								<p>Posted by: {{category.user.username}}</p>
+								<p>{{category.comment.count()}} Comments</p>
+							</div>
+							
+							<div class="rating">
+
+								<span class="foot" > <a href="{{url_for('main.like',id = category.id)}}"><i class="fa-solid fa-heart" style="color: #F32424;"></i></a> {{category.upvote.count()}}
+								</span>
+								<span class="foot"> <a href="{{url_for('main.dislike',id = category.id)}}"><i class="fa-solid fa-heart-crack" style="color: #F32424;"></i></a> {{category.downvote.count()}}
+								</span>
+
+							</div>
+
+							<a href="{{url_for('main.comment',pitch_id = category.id)}}"style="background-color: #6965fc;" class="btn btn-sm"> Comment</a>
+							
+						</section>
+					
+					{% endfor %}
+				{% else %}
+					<div class="card w-90 mb-3">
+						<div class="card-body">
+					
+							<p class="card-title">Category Has 0 posts</p>
+						</div>
+					</div>
+				{% endif %}
+{% endmacro %}
