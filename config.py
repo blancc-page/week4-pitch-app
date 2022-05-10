@@ -4,7 +4,7 @@ import os
   
   
 class Config:
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:dclxvi@localhost:5433/pitch'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:dclxvi@localhost:4472/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS=True
     SECRET_KEY=os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
