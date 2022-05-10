@@ -36,6 +36,12 @@ section {
 	padding:  2rem 3rem;
 	width:  100%; 
 	border: 0.1em solid black;
+    transition: all ease 0.5s;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0) ;
 }
 
 p {
