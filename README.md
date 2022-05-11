@@ -31,10 +31,7 @@ Feel free to check the [issues page](../../issues/).
 ## :muscle: Show your support
 
     Please give a⭐️if you love this project.
-
-## 🐞 Known Bugs
-
-Heroku deployment has a 500 (Internal server error).
+    
 
 ## 📝 License
 
