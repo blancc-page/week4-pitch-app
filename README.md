@@ -32,6 +32,10 @@ Feel free to check the [issues page](../../issues/).
 
     Please give a⭐️if you love this project.
 
+## 🐞 Known Bugs
+
+Heroku deployment has a 500 (Internal server error).
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
