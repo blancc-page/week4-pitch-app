@@ -14,13 +14,14 @@ class Config:
     MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD')
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:dclxvi@127.0.0.1:5432/pitch'
+    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL')
 
 
 class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://postgres:dclxvi@127.0.0.1:5432/pitch'
     DEBUG = True
 
 config_options = {
-'development':DevConfig,
-'production':ProdConfig
+    'development':DevConfig,
+    'production':ProdConfig
 }
