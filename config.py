@@ -13,7 +13,7 @@ class Config:
     MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD')
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI="postgresql://ckrctazlhrjoep:bb8d90660e579b908322468873f6fb38b5a298677ee47e80e87bf2d4f0c59260@ec2-44-196-223-128.compute-1.amazonaws.com:5432/dc1f0nupgurpbr"
 
 
 class DevConfig(Config):
